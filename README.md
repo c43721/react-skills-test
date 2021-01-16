@@ -42,6 +42,22 @@ Handling dates in JavaScript is difficult, with packages like moment usually tak
 
 I had fun when doing this challenge. I knew when I started I was able to do it quickly, but I also realized I could use this opportunity to flex my skills. I have a lot of experience in researching new topics and packages, and this is great proof of that. With using a new CSS framework like `chakra`, to `date-fns`, I believe I proved that I can dive into a new techology fast and contribute to creating something new, even if it's not perfect first try.
 
+# Potential Improvements
+
+There's a few, let's go through them step by step.
+
+1.  Automatic coupons
+    Right now, it's a manual process, and that's not good. I had a couple of ideas on how to do this actually. Here are some of those ideas;
+
+        - Compare all ingredients and their names to their ingredient ID, check with the specials array's ingedient id, and send that as an array
+        - User has option to either select an ingredient, or provide their own
+        - Allow dropdown of coupons when creating new recipe.
+
+    I had the right idea I think on all 3 of these, just didn't have the correct execution of them.
+
+2.  Better form placements
+    Form placement matters. For this, it was easier to go with just a flex container instead of fidgeting with Formik and Grid. Grid would have been nice, however timeboxing myself became the issue.
+
 # Credits
 
 takeoutlist.com for this [default-image](https://www.takeoutlist.com/assets/images/food_default.png) on Google Images
