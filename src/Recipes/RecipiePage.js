@@ -22,9 +22,6 @@ export default function RecipiePage(props) {
         <Link to="/recipies/new" as={RouterLink} m={2}>
           <Button size="sm">Add new Recipie</Button>
         </Link>
-        <Link to="/specials/new" as={RouterLink} m={2}>
-          <Button size="sm">Add new Special</Button>
-        </Link>
         <ColorModeSwitcher>Switch Colors!</ColorModeSwitcher>
       </ButtonGroup>
       <SimpleGrid mt={5} columns={4} gap={8} maxW="85vw">

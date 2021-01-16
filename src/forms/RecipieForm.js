@@ -14,20 +14,23 @@ import {
 } from '@chakra-ui/react';
 
 export default function RecipieForm(props) {
+  // Take out editDate so that it can be automatically updated
+  const { editDate, ...rest } = props;
   return (
     <Formik
+      enableReinitialize
       initialValues={{
-        title: props.title ?? '',
-        description: props.description ?? '',
-        servings: props.servings ?? 0,
-        prepTime: props.prepTime ?? 0,
-        cookTime: props.cookTime ?? 0,
+        title: rest.title ?? '',
+        description: rest.description ?? '',
+        servings: rest.servings ?? 0,
+        prepTime: rest.prepTime ?? 0,
+        cookTime: rest.cookTime ?? 0,
         // The props for this should always be present
-        postDate: props.postDate || format(new Date(), 'MM/dd/yyyy hh:MM:SS a'),
+        postDate: rest.postDate || format(new Date(), 'MM/dd/yyyy hh:MM:SS a'),
         // Here to automatically update, don't override
-        editDate: props.editDate || format(new Date(), 'MM/dd/yyyy hh:MM:SS a'),
-        ingredients: props.ingredients?.length > 0 ? props.ingredients : [],
-        directions: props.directions?.length > 0 ? props.directions : [],
+        editDate: rest.editDate ?? format(new Date(), 'MM/dd/yyyy hh:MM:SS a'),
+        ingredients: rest.ingredients?.length > 0 ? props.ingredients : [],
+        directions: rest.directions?.length > 0 ? props.directions : [],
       }}
       onSubmit={values => console.log(values)}
       render={({ values }) => (

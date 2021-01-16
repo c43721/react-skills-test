@@ -1,17 +1,34 @@
 import React, { useEffect, useState } from 'react';
 import { ChakraProvider, theme } from '@chakra-ui/react';
-// import { ColorModeSwitcher } from './ColorModeSwitcher';
 import axios from 'axios';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import RecipiePage from './Recipes/RecipiePage';
 import RecipieDetailPage from './Recipes/RecipieDetail';
 import AddRecipie from './Recipes/AddRecipie';
+import EditRecipie from './Recipes/EditRecipie';
 
 function App() {
   const [loadingRecipies, setLoadingRecipies] = useState(true);
+  const [refreshRecipies, setRefreshRecipies] = useState(false);
   const [recipieData, setRecipieData] = useState([]);
   const [specialsData, setSpecialsData] = useState([]);
+
+  const addRecipie = newRecipie => {
+    const addData = async () => {
+      await axios.post('/recipies', newRecipie);
+      setRefreshRecipies(!refreshRecipies);
+    };
+    addData();
+  };
+
+  const editRecipie = updatedRecipie => {
+    const addData = async () => {
+      await axios.patch('/recipies', updatedRecipie);
+      setRefreshRecipies(!refreshRecipies);
+    };
+    addData();
+  };
 
   useEffect(() => {
     const getData = async () => {
@@ -24,7 +41,7 @@ function App() {
       setLoadingRecipies(false);
     };
     getData();
-  }, []);
+  }, [refreshRecipies]);
 
   return (
     <ChakraProvider theme={theme}>
@@ -43,10 +60,10 @@ function App() {
             />
           </Route>
           <Route path="/recipies/new">
-            <AddRecipie />
+            <AddRecipie addRecipie={addRecipie} />
           </Route>
-          <Route path="/specials/new">
-            <AddRecipie />
+          <Route path="/recipies/edit/:uuid">
+            <EditRecipie recipieData={recipieData} editRecipie={editRecipie} />
           </Route>
         </Switch>
       </Router>

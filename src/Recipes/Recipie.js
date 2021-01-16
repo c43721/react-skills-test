@@ -50,7 +50,7 @@ export default function Recipie(props) {
                 View Recipie
               </Button>
             </Link>
-            <Link to={`/edit/${props.uuid}`} as={RouterLink}>
+            <Link to={`/recipies/edit/${props.uuid}`} as={RouterLink}>
               <Button size="sm" mt={2}>
                 Edit Recipie
               </Button>
