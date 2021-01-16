@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Recipie from './Recipie';
-import RecipieLoading from './RecipieLoading';
+import Recipie from './Recipe';
+import RecipieLoading from './RecipeLoading';
 
 import {
   SimpleGrid,
@@ -14,13 +14,13 @@ import {
 import { Link as RouterLink } from 'react-router-dom';
 import { ColorModeSwitcher } from '../ColorModeSwitcher';
 
-export default function RecipiePage(props) {
+export default function RecipePage(props) {
   return (
     <Center flexDirection="column">
-      <Heading m={5}>My Recipie List</Heading>
+      <Heading m={5}>My Recipe List</Heading>
       <ButtonGroup justifyContent="center" alignItems="center">
         <Link to="/recipies/new" as={RouterLink} m={2}>
-          <Button size="sm">Add new Recipie</Button>
+          <Button size="sm">Add new Recipe</Button>
         </Link>
         <ColorModeSwitcher>Switch Colors!</ColorModeSwitcher>
       </ButtonGroup>

@@ -3,7 +3,7 @@ import React from 'react';
 import { Box, Image, Center, Button, Link, ButtonGroup } from '@chakra-ui/react';
 import { Link as RouterLink } from 'react-router-dom';
 
-export default function Recipie(props) {
+export default function Recipe(props) {
   return (
     <Center>
       <Box
@@ -14,7 +14,7 @@ export default function Recipie(props) {
         overflow="hidden"
       >
         <Image
-          src={props.images.full}
+          src={props.images?.full ?? 'https://www.takeoutlist.com/assets/images/food_default.png'}
           alt={'https://www.takeoutlist.com/assets/images/food_default.png'}
         />
 
@@ -47,12 +47,12 @@ export default function Recipie(props) {
           <ButtonGroup>
             <Link to={`/details/${props.uuid}`} as={RouterLink}>
               <Button size="sm" mt={2}>
-                View Recipie
+                View Recipe
               </Button>
             </Link>
             <Link to={`/recipies/edit/${props.uuid}`} as={RouterLink}>
               <Button size="sm" mt={2}>
-                Edit Recipie
+                Edit Recipe
               </Button>
             </Link>
           </ButtonGroup>

@@ -32,7 +32,7 @@ export default function RecipieForm(props) {
         ingredients: rest.ingredients?.length > 0 ? props.ingredients : [],
         directions: rest.directions?.length > 0 ? props.directions : [],
       }}
-      onSubmit={values => handleUpdate(values)}
+      onSubmit={values => handleUpdate(values, rest.uuid)}
       render={({ values }) => (
         <Form>
           <Heading m={2}>Basic Information</Heading>

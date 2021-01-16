@@ -13,7 +13,7 @@ export default function AddRecipie(props) {
         </Link>
       </ButtonGroup>
 
-      <Heading>Add new Recipie</Heading>
+      <Heading>Add new Recipe</Heading>
       <RecipieForm handleUpdate={props.addRecipie}/>
     </Center>
   );

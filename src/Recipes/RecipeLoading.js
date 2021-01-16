@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Box, Center, SkeletonCircle, SkeletonText } from '@chakra-ui/react';
 
-export default function RecipieLoading() {
+export default function RecipeLoading() {
   return (
     <Center>
       <Box padding="6" w="25vw" boxShadow="lg" bg="dark">

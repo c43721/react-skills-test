@@ -21,7 +21,7 @@ import { StarIcon } from '@chakra-ui/icons';
 import Ingredient from '../Ingredient/Ingredient';
 import { Link as RouterLink } from 'react-router-dom';
 
-export default function RecipieDetail(props) {
+export default function RecipeDetail(props) {
   const { specialsData: specials } = props;
   const { uuid } = useParams();
   const recipie = props.recipieData.find(recipie => recipie.uuid === uuid);
@@ -42,7 +42,7 @@ export default function RecipieDetail(props) {
         <ButtonGroup>
           <Link to="/" as={RouterLink}>
             <Button size="sm" m={4}>
-              Find Another Recipie
+              Find Another Recipe
             </Button>
           </Link>
         </ButtonGroup>

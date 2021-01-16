@@ -12,7 +12,7 @@ export default function EditRecipie(props) {
     return (
       <Container>
         <Text fontSize="5xl" color="red">
-          No recipie found!
+          No recipe found!
         </Text>
       </Container>
     );
@@ -26,7 +26,7 @@ export default function EditRecipie(props) {
         </Link>
       </ButtonGroup>
 
-      <Heading>Edit Recipie</Heading>
+      <Heading>Edit Recipe</Heading>
       <RecipieForm handleUpdate={props.editRecipie} {...recipie} />
     </Center>
   );

@@ -3,8 +3,8 @@ import { ChakraProvider, theme } from '@chakra-ui/react';
 import axios from 'axios';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import RecipiePage from './Recipes/RecipiePage';
-import RecipieDetailPage from './Recipes/RecipieDetail';
+import RecipiePage from './Recipes/RecipePage';
+import RecipieDetailPage from './Recipes/RecipeDetail';
 import AddRecipie from './Recipes/AddRecipie';
 import EditRecipie from './Recipes/EditRecipie';
 
@@ -14,20 +14,20 @@ function App() {
   const [recipieData, setRecipieData] = useState([]);
   const [specialsData, setSpecialsData] = useState([]);
 
-  const addRecipie = newRecipie => {
-    const addData = async (newRecipie) => {
-      await axios.post('/recipies', newRecipie);
+  const addRecipie = (newRecipie, uuid) => {
+    const addData = async newRecipie => {
+      await axios.post('/recipes', newRecipie);
       setRefreshRecipies(!refreshRecipies);
     };
     addData(newRecipie);
   };
 
-  const editRecipie = updatedRecipie => {
-    const addData = async (updatedRecipie) => {
-      await axios.patch('/recipies', updatedRecipie);
+  const editRecipie = (updatedRecipie, id) => {
+    const addData = async (updatedRecipie, id) => {
+      await axios.patch(`/recipes/${id}`, updatedRecipie);
       setRefreshRecipies(!refreshRecipies);
     };
-    addData(updatedRecipie);
+    addData(updatedRecipie, id);
   };
 
   useEffect(() => {
@@ -40,7 +40,9 @@ function App() {
       setSpecialsData(specials);
       setLoadingRecipies(false);
     };
-    getData();
+    setTimeout(() => {
+      getData();
+    }, 1000);
   }, [refreshRecipies]);
 
   return (
