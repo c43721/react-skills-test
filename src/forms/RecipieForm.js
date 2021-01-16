@@ -22,7 +22,10 @@ export default function RecipieForm(props) {
         servings: props.servings ?? 0,
         prepTime: props.prepTime ?? 0,
         cookTime: props.cookTime ?? 0,
+        // The props for this should always be present
         postDate: props.postDate || format(new Date(), 'MM/dd/yyyy hh:MM:SS a'),
+        // Here to automatically update, don't override
+        editDate: props.editDate || format(new Date(), 'MM/dd/yyyy hh:MM:SS a'),
         ingredients: props.ingredients?.length > 0 ? props.ingredients : [],
         directions: props.directions?.length > 0 ? props.directions : [],
       }}
