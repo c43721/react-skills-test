@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import RecipiePage from './Recipes/RecipiePage';
 import RecipieDetailPage from './Recipes/RecipieDetail';
+import AddRecipie from './Recipes/AddRecipie';
 
 function App() {
   const [loadingRecipies, setLoadingRecipies] = useState(true);
@@ -40,6 +41,12 @@ function App() {
               recipieData={recipieData}
               specialsData={specialsData}
             />
+          </Route>
+          <Route path="/recipies/new">
+            <AddRecipie />
+          </Route>
+          <Route path="/specials/new">
+            <AddRecipie />
           </Route>
         </Switch>
       </Router>

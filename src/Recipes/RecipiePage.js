@@ -19,10 +19,10 @@ export default function RecipiePage(props) {
     <Center flexDirection="column">
       <Heading m={5}>My Recipie List</Heading>
       <ButtonGroup justifyContent="center" alignItems="center">
-        <Link to="/" as={RouterLink} m={2}>
+        <Link to="/recipies/new" as={RouterLink} m={2}>
           <Button size="sm">Add new Recipie</Button>
         </Link>
-        <Link to="/" as={RouterLink} m={2}>
+        <Link to="/specials/new" as={RouterLink} m={2}>
           <Button size="sm">Add new Special</Button>
         </Link>
         <ColorModeSwitcher>Switch Colors!</ColorModeSwitcher>
