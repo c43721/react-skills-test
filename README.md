@@ -38,10 +38,10 @@ With state management being a pain in React, sometimes Redux makes it more compl
 
 Handling dates in JavaScript is difficult, with packages like moment usually taking the spotlight. However, I opted to use a newer and dependency-free package `date-fns` to handle my dates. This helped me with setting the dates automatically, rather than having the user do it. It also means I can format my dates however I'd like!
 
-## Statement
+# Statement
 
 I had fun when doing this challenge. I knew when I started I was able to do it quickly, but I also realized I could use this opportunity to flex my skills. I have a lot of experience in researching new topics and packages, and this is great proof of that. With using a new CSS framework like `chakra`, to `date-fns`, I believe I proved that I can dive into a new techology fast and contribute to creating something new, even if it's not perfect first try.
 
-## Credits
+# Credits
 
 takeoutlist.com for this [default-image](https://www.takeoutlist.com/assets/images/food_default.png) on Google Images
