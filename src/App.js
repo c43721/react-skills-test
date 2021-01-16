@@ -65,7 +65,11 @@ function App() {
             <AddRecipie addRecipie={addRecipie} />
           </Route>
           <Route path="/recipies/edit/:uuid">
-            <EditRecipie recipieData={recipieData} editRecipie={editRecipie} />
+            <EditRecipie
+              recipieData={recipieData}
+              specials={specialsData}
+              editRecipie={editRecipie}
+            />
           </Route>
         </Switch>
       </Router>

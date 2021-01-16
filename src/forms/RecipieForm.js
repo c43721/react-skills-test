@@ -15,7 +15,7 @@ import {
 
 export default function RecipieForm(props) {
   // Take out editDate so that it can be automatically updated
-  const { editDate, handleUpdate, ...rest } = props;
+  const { editDate, handleUpdate, specials, isEdit = false, ...rest } = props;
   return (
     <Formik
       // enableReinitialize
@@ -28,7 +28,7 @@ export default function RecipieForm(props) {
         // The props for this should always be present
         postDate: rest.postDate || format(new Date(), 'MM/dd/yyyy hh:MM:SS a'),
         // Here to automatically update, don't override
-        editDate: rest.editDate ?? format(new Date(), 'MM/dd/yyyy hh:MM:SS a'),
+        editDate: format(new Date(), 'MM/dd/yyyy hh:MM:SS a'),
         ingredients: rest.ingredients?.length > 0 ? props.ingredients : [],
         directions: rest.directions?.length > 0 ? props.directions : [],
       }}
@@ -197,6 +197,19 @@ export default function RecipieForm(props) {
                           </FormControl>
                         )}
                       </Field>
+
+                      {isEdit && (
+                        <Field name={`ingredients.${index}.uuid`}>
+                          {({ field }) => (
+                            <FormControl>
+                              <FormLabel htmlFor="recipie-ingred-name">
+                                ID of Item (Replace for Coupon)
+                              </FormLabel>
+                              <Input {...field} id="recipie-ingred-uuid" />
+                            </FormControl>
+                          )}
+                        </Field>
+                      )}
 
                       <ButtonGroup m={2}>
                         <Button

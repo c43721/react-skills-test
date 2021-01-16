@@ -1,6 +1,14 @@
 import React from 'react';
 
-import { Center, Heading, Button, ButtonGroup, Link, Text, Container } from '@chakra-ui/react';
+import {
+  Center,
+  Heading,
+  Button,
+  ButtonGroup,
+  Link,
+  Text,
+  Container,
+} from '@chakra-ui/react';
 import RecipieForm from '../forms/RecipieForm';
 import { Link as RouterLink, useParams } from 'react-router-dom';
 
@@ -27,7 +35,12 @@ export default function EditRecipie(props) {
       </ButtonGroup>
 
       <Heading>Edit Recipe</Heading>
-      <RecipieForm handleUpdate={props.editRecipie} {...recipie} />
+      <RecipieForm
+        isEdit
+        specials={props.specials}
+        handleUpdate={props.editRecipie}
+        {...recipie}
+      />
     </Center>
   );
 }
