@@ -10,7 +10,7 @@ I'm most familiar with React, and especially with creating mockups fast. Vue was
 
 ## chakra-ui?
 
-This was a difficult decision. I have build many projects using Bootstrap, Ant-design, and Material-ui, and I prefer Material. However, to pick my frontend library of choice, I did 2 things:
+This was a difficult decision. I have built many projects using Bootstrap, Ant-design, and Material-ui, and I prefer Material. However, to pick my frontend library of choice, I did 2 things:
 
 - Researched each library
 - Calculated the effort to set up vs the end result
