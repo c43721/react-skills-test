@@ -1,68 +1,47 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Frontend Skills Test
 
-## Available Scripts
+Challenge: Build a UI that uses a backend API while utilizing whatever framework or libraries we choose.
 
-In the project directory, you can run:
+# Reasonings behind my choices of Packages
 
-### `yarn start`
+## React?
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+I'm most familiar with React, and especially with creating mockups fast. Vue was my second choice, with their very powerful directives, however I opted to go with React instead. A big part was because I knew how to create routes, and another part was because there was a bootstrapper around `chakra-ui`, the frontend css library I used.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## chakra-ui?
 
-### `yarn test`
+This was a difficult decision. I have build many projects using Bootstrap, Ant-design, and Material-ui, and I prefer Material. However, to pick my frontend library of choice, I did 2 things:
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Researched each library
+- Calculated the effort to set up vs the end result
 
-### `yarn build`
+This helped me because I had never touched chakra-ui before, but looking into the docs, it became more familiar and better-looking than bootstrap, as well as some very nice additions- notably the color-switcher.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Formik?
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Formik is an easy choice - creating forms in React are cumbersome and difficult. I've used Refs in the past, and I'm okay with them, but to really move fast, especially when creating new recipies, it meant that using Formik to handle forms would save me more time in the long run, and it did.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## No TypeScript?
 
-### `yarn eject`
+This was a bit more difficult. I'm a lover of TypeScript, and I think it's the best thing to come to JavaScript. However, the tradoffs are still there;
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Static types means taking the time to complete those Types
+- If this was to scale up, user inputs and type checking becomes vital
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+However, the simple reason is: because this isn't a large project. Knowing when to make that tradeoff of time spent developing vs time-to-market are cruicial, and I think I made the correct choice.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## No Redux?
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+With state management being a pain in React, sometimes Redux makes it more complicated to work in. I like Redux, but this is not the project to use it with. Same reasoning as TypeScript, there's a time and place for Redux, and this wasn't it.
 
-## Learn More
+## date-fns?
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Handling dates in JavaScript is difficult, with packages like moment usually taking the spotlight. However, I opted to use a newer and dependency-free package `date-fns` to handle my dates. This helped me with setting the dates automatically, rather than having the user do it. It also means I can format my dates however I'd like!
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Statement
 
-### Code Splitting
+I had fun when doing this challenge. I knew when I started I was able to do it quickly, but I also realized I could use this opportunity to flex my skills. I have a lot of experience in researching new topics and packages, and this is great proof of that. With using a new CSS framework like `chakra`, to `date-fns`, I believe I proved that I can dive into a new techology fast and contribute to creating something new, even if it's not perfect first try.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## Credits
 
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+takeoutlist.com for this [default-image](https://www.takeoutlist.com/assets/images/food_default.png) on Google Images
