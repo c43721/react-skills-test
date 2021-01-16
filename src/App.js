@@ -15,19 +15,19 @@ function App() {
   const [specialsData, setSpecialsData] = useState([]);
 
   const addRecipie = newRecipie => {
-    const addData = async () => {
+    const addData = async (newRecipie) => {
       await axios.post('/recipies', newRecipie);
       setRefreshRecipies(!refreshRecipies);
     };
-    addData();
+    addData(newRecipie);
   };
 
   const editRecipie = updatedRecipie => {
-    const addData = async () => {
+    const addData = async (updatedRecipie) => {
       await axios.patch('/recipies', updatedRecipie);
       setRefreshRecipies(!refreshRecipies);
     };
-    addData();
+    addData(updatedRecipie);
   };
 
   useEffect(() => {

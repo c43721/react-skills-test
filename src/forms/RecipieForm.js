@@ -15,10 +15,10 @@ import {
 
 export default function RecipieForm(props) {
   // Take out editDate so that it can be automatically updated
-  const { editDate, ...rest } = props;
+  const { editDate, handleUpdate, ...rest } = props;
   return (
     <Formik
-      enableReinitialize
+      // enableReinitialize
       initialValues={{
         title: rest.title ?? '',
         description: rest.description ?? '',
@@ -32,7 +32,7 @@ export default function RecipieForm(props) {
         ingredients: rest.ingredients?.length > 0 ? props.ingredients : [],
         directions: rest.directions?.length > 0 ? props.directions : [],
       }}
-      onSubmit={values => console.log(values)}
+      onSubmit={values => handleUpdate(values)}
       render={({ values }) => (
         <Form>
           <Heading m={2}>Basic Information</Heading>

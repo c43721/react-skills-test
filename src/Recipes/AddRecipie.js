@@ -14,7 +14,7 @@ export default function AddRecipie(props) {
       </ButtonGroup>
 
       <Heading>Add new Recipie</Heading>
-      <RecipieForm />
+      <RecipieForm handleUpdate={props.addRecipie}/>
     </Center>
   );
 }

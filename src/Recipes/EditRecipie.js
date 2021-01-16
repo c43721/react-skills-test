@@ -5,7 +5,6 @@ import RecipieForm from '../forms/RecipieForm';
 import { Link as RouterLink, useParams } from 'react-router-dom';
 
 export default function EditRecipie(props) {
-  console.log(props)
   const { uuid } = useParams();
   const recipie = props.recipieData.find(recipie => recipie.uuid === uuid);
 
